@@ -1,0 +1,139 @@
+*, *::before, *::after{
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+}
+/* ----------Drum View---------- */
+.main-container{
+  height: 100vh;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container{
+  display: flex;
+  background-color: grey;
+  height: 300px;
+  width: 650px;
+  box-shadow: 0 0 30px rgba(0, 0, 255, 0.8);
+  border-radius: 10px;
+}
+.btn-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 5px;
+  padding: 30px;
+
+}
+.btn{
+  height: 70px;
+  width: 100px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 5px 5px 20px rgba(0, 0, 255, 0.8);
+  cursor: pointer;
+}
+.btn.active{
+  background-color: blue;
+  box-shadow: 0 0 30px rgba(1, 1, 31, 0.8);
+}
+.btn:hover{
+  background-color: blue;
+  box-shadow: 0 0 30px rgba(1, 1, 31, 0.8);
+}
+/* ----------Sliders Checked---------- */
+.input-container{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.the-slider{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 70px;
+}
+.input-text{
+  font-size: 25px;
+}
+.input-check{
+  display: none;
+}
+.input-check-slide{
+  background-color: white;
+  height: 35px;
+  width: 70px;
+  border-radius: 50px;
+  cursor: pointer;
+  position: relative;
+}
+.input-check-slide::before{
+  position: absolute;
+  content: '';
+  background-color: black;
+  height: 30px;
+  width: 30px;
+  margin: 3px;
+  border-radius: 50px;
+}
+.input-check:checked + .input-check-slide{
+  background-color: red;
+}
+.input-check:checked + .input-check-slide::before{
+  transform: translateX(32px);
+  background-color: white;
+}
+/* ----------Sliders Volume---------- */
+.volume-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  height: 50px;
+  width: 150px;
+  background-color: #1f2833;
+  border-radius: 10px;
+}
+.volume-value{
+  color: white; 
+  font-size: 20px;
+}
+.input-range{
+  margin-top: 10px;
+}
+/* ----------Sliders Bank---------- */
+.input-bank{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.input-bank-bank{
+  display: none;
+}
+.input-bank-slide{
+  background-color: white;
+  height: 35px;
+  width: 70px;
+  border-radius: 50px;
+  cursor: pointer;
+  position: relative;
+}
+.input-bank-slide::before{
+  position: absolute;
+  content: '';
+  background-color: black;
+  height: 30px;
+  width: 30px;
+  margin: 3px;
+  border-radius: 50px;
+}
+.input-bank-bank:checked + .input-bank-slide{
+  background-color: red;
+}
+.input-bank-bank:checked + .input-bank-slide::before{
+  transform: translateX(32px);
+  background-color: white;
+}
